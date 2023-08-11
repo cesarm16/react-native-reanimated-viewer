@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   animatedContainer: {
-    backgroundColor: '#000000',
+    backgroundColor: '#F5F7FD',
     width: '100%',
     height: '100%',
   },
@@ -285,7 +285,7 @@ const ImageViewer = forwardRef<ImageViewerRef, ImageViewerProps>((props, ref) =>
         : 'ff';
     opacity.length === 1 && (opacity = `0${opacity}`);
     return {
-      backgroundColor: `#000000${opacity}`,
+      backgroundColor: `#F5F7FD${opacity}`,
     };
   }, [screenDimensions.height]);
 
@@ -755,9 +755,7 @@ const ImageViewer = forwardRef<ImageViewerRef, ImageViewerProps>((props, ref) =>
       animationType="fade"
       transparent
       onRequestClose={onRequestClose}
-      statusBarTranslucent
     >
-      <StatusBar backgroundColor="#000" barStyle="light-content" />
       <GestureHandlerRootView style={styles.full}>
         {activeSource ? (
           <GestureDetector
